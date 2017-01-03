@@ -3,12 +3,12 @@ def commaCode(arr):
 	end = arr[-1]
 	start = arr[0:-1]
 	for i in range(len(start)):
-		if int(start[i]):
+		if isinstance(start[i],int):
 			st += str(start[i]) + ", "
 		else:
 			st += start[i] + ", "
 
-	if int(start[i]) == True:
+	if isinstance(start[i],int):
 		print(st + "and " + str(end))
 	else:
 		print(st + "and " + end)
@@ -16,5 +16,5 @@ def commaCode(arr):
 		
 		
 
-spam = ['test',2,3,4]
+spam = [1,'t','g','d']
 commaCode(spam)	
