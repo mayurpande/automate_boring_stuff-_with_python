@@ -5,7 +5,7 @@ def commaCode(arr):
 	for i in range(len(start)):
 		st += start[i] + ", "
 
-	print(st)
+	print(st + "and " + end)
 		
 		
 		
