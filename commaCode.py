@@ -10,5 +10,5 @@ def commaCode(arr):
 		
 		
 
-spam = ['apples','pears','cinnamon','something']
+spam = [1,2,3,4]
 commaCode(spam)	
