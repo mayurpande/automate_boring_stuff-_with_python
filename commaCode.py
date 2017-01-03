@@ -1,11 +1,13 @@
 def commaCode(arr):
-	st = ''
+	st = ""
 	end = arr[-1]
 	start = arr[0:-1]
 	for i in range(len(start)):
-		st += start[i] + ", "
+		if int(start[i]):
+			st += str(start[i]) + ", "
 
-	print(st + "and " + end)
+	if int(start[i]):
+		print(st + "and " + str(end))
 		
 		
 		
