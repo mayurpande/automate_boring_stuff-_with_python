@@ -4,12 +4,12 @@ theBoard = {'top-L': ' ', 'top-M': ' ', 'top-R': ' ',
 
 
 def printBoard(board):
-	print(board['top-L'] + | + print(board['top-M'] + | + print(board['top-R'] 
+	print(board['top-L'] + '|' + board['top-M'] + '|' + board['top-R']) 
 	print('-+-+-')
-	print(board['mid-L'] + | + print(board['mid-L'] + | + print(board['mid-L'] 
+	print(board['mid-L'] +  '|' + board['mid-L'] + '|' + board['mid-L'])
 	print('-+-+-')
-	print(board['low-L'] + | + print(board['low-L'] + | + print(board['low-L']   
+	print(board['low-L'] + '|' + board['low-L'] + '|' + board['low-L'])   
 
 
-print(theBoard)
+printBoard(theBoard)
 
