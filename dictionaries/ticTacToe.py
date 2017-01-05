@@ -2,7 +2,7 @@ theBoard = {'top-L': ' ', 'top-M': ' ', 'top-R': ' ',
             'mid-L': ' ', 'mid-M': ' ', 'mid-R': ' ',
             'low-L': ' ', 'low-M': ' ', 'low-R': ' '}
 
-
+turn = 'o'
 def printBoard(board):
 	print(board['top-L'] + '|' + board['top-M'] + '|' + board['top-R']) 
 	print('-+-+-')
@@ -13,11 +13,11 @@ def printBoard(board):
 
 	
 
-def playerTurn(turn):
-	if turn == 'x':
-		turn == 'o'
+def playerTurn(turns):
+	if turns == 'x':
+		return turns == 'o'
 	else:
-		 turn == 'x'
+		 return turns == 'x'
 		
 
 def makeMove():
