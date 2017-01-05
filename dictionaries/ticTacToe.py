@@ -23,7 +23,7 @@ def checkWin():
 def makeMove():
 	validInput = False
 		
-	if turn == 'X'
+	if turn == 'X':
 		print('Player X enter your move:')
 		move = input()
 	else:
@@ -32,4 +32,18 @@ def makeMove():
 	theBoard[move] = turn
 
 
-makeMove()
+def changeMove():
+	global turn
+	if turn == 'X':
+		turn = 'O'
+	else:
+		turn = 'X'
+	
+
+
+for i in range(boardSize):
+	printBoard(theBoard)
+	changeMove()
+	makeMove()
+	printBoard(theBoard)
+	
