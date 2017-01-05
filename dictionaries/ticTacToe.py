@@ -12,7 +12,21 @@ def printBoard(board):
 
 
 	
+def checkWin(turn):
+	 if(((theBoard['top-L']==turn && theBoard['top-M']==turn && theBoard['top-R']==turn)||
+    (theBoard['mid-L']==turn && board['mid-M']==turn && theBoard['mid-R']==turn)||
+    (theBoard['low-L']==turn && board['low-M']==turn && theBoard['low-R']==turn)||
+	(theBoard['top-L']==turn && board['mid-L']==turn && theBoard['low-L']==turn)||
+	(theBoard['top-M']==turn && board['mid-M']==turn && theBoard['low-M']==turn)||
+	(theBoard['top-R']==turn && board['mid-R']==turn && theBoard['low-R']==turn)||
+	(theBoard['top-R']==turn && board['mid-M']==turn && theBoard['low-L']==turn)||
+	(theBoard['top-L']==turn && board['mid-M']==turn && theBoard['low-R']==turn)||
 
+
+
+
+
+)))
 		
 
 def makeMove():
@@ -25,6 +39,7 @@ def makeMove():
 			turn = 'x'
 		else:
 			turn = 'o'
+		checkWin(turn)
 		printBoard(theBoard)
 
 
