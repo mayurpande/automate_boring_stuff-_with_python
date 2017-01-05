@@ -8,7 +8,10 @@ import pyperclip
 #paste text from clipboard
 text = pyperclip.paste()
 
-# TODO:Separate lines and add stars
+# Separate lines and add stars
+lines = text.split('\n')
+for i in range(len(lines)):	#loop through all indexes in the "lines" list
+	line[i] = '* ' + lines[i] #add star to each string in "lines" list
 
 #copy the new text to the clipboard
 pyperclip.copy(text) 
