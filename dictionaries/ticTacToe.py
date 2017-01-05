@@ -13,20 +13,10 @@ def printBoard(board):
 
 	
 def checkWin(turn):
-	 if(((theBoard['top-L']==turn && theBoard['top-M']==turn && theBoard['top-R']==turn)||
-    (theBoard['mid-L']==turn && board['mid-M']==turn && theBoard['mid-R']==turn)||
-    (theBoard['low-L']==turn && board['low-M']==turn && theBoard['low-R']==turn)||
-	(theBoard['top-L']==turn && board['mid-L']==turn && theBoard['low-L']==turn)||
-	(theBoard['top-M']==turn && board['mid-M']==turn && theBoard['low-M']==turn)||
-	(theBoard['top-R']==turn && board['mid-R']==turn && theBoard['low-R']==turn)||
-	(theBoard['top-R']==turn && board['mid-M']==turn && theBoard['low-L']==turn)||
-	(theBoard['top-L']==turn && board['mid-M']==turn && theBoard['low-R']==turn)||
-
-
-
-
-
-)))
+	if (theBoard['top-L']==turn and theBoard['top-M']==turn and theBoard['top-R']==turn or theBoard['mid-L']==turn and board['mid-M']==turn and theBoard['mid-R']==turn) or (theBoard['low-L']==turn and theBoard['low-M']==turn and theBoard['low-R']==turn) or (theBoard['top-L']==turn and theBoard['mid-L']==turn and theBoard['low-L']==turn) or (theBoard['top-M']==turn and theBoard['mid-M']==turn and theBoard['low-M']==turn) or (theBoard['top-R']==turn and theBoard['mid-R']==turn and theBoard['low-R']==turn) or (theBoard['top-R']==turn and theBoard['mid-M']==turn and theBoard['low-L']==turn) or (theBoard['top-L']==turn and theBoard['mid-M']==turn and theBoard['low-R']==turn):
+		return True
+	else:
+		return False
 		
 
 def makeMove():
