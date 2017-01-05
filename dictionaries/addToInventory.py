@@ -1,8 +1,10 @@
 def addToInventory(inventory,addedItems):
 	for i in range(len(addedItems)):
 		if addedItems[i] == (addedItems[i] in inventory.keys()):
-			for v in inventory.values():
-				inventory[addedItems[i]] = v + 1
+			inventory[addedItems[i]] = inventory[addedItems[i]] + 1
+		else:
+			inventory.setdefault(addedItems[i],0)
+			inventory[addedItems[i]] = inventory[addedItems[i]] + 1
 	return inventory
 	
 
@@ -17,5 +19,5 @@ def displayInventory(inventory):
 
 inv = {'gold coin' : 42, 'rope':1}
 dragonLoot = ['gold coin','dagger','gold coin','gold coin','ruby']
-test = addToInventory(inv,dragonLoot)
-displayInventory(test)
+inven = addToInventory(inv,dragonLoot)
+displayInventory(inven)
