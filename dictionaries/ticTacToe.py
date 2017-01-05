@@ -21,15 +21,33 @@ def checkWin():
 		
 
 def makeMove():
-	validInput = False
+	validInput = True
+			
+	while True:
+		if turn == 'X':
+			print('Player X enter your move:')
+			move = input()
+			if theBoard[move] == turn:
+				print('Error move')
+				continue
+			else: 
+				theBoard[move] = turn
+				break
+					
+			
+		elif turn == 'O':
+			print('Player O enter your move:')
+			move = input()
+			if theBoard[move] == turn:
+				print('Error move')
+				continue
+			else: 
+				theBoard[move] = turn
+				break
 		
-	if turn == 'X':
-		print('Player X enter your move:')
-		move = input()
-	else:
-		print('Player O enter your move:')
-		move = input()
-	theBoard[move] = turn
+		
+		
+			
 
 
 def changeMove():
@@ -42,7 +60,6 @@ def changeMove():
 
 
 for i in range(boardSize):
-	printBoard(theBoard)
 	changeMove()
 	makeMove()
 	printBoard(theBoard)
