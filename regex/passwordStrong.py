@@ -13,7 +13,7 @@ while True:
 	pw = input()
 	pwChecker = re.compile(r'[a-zA-Z0-9]{8,}')
 	mo = pwChecker.search(pw)
-	if mo.group() == None:
+	if mo == None:
 		continue
 	else:
 		break
