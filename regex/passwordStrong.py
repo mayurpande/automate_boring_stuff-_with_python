@@ -11,9 +11,9 @@ import re
 while True:
 	print('Please enter pw, must be 8 characters long and contain one digit, one uppercase letter, and one lowercase letter')
 	pw = input()
-	pwChecker = re.compile(r'[a-zA-Z0-9]{8,}')
-	mo = pwChecker.findall(pw)
-	if len(mo) == 0:
+	pwChecker = re.compile(r'^(?=.*[A-Z]+)(?=.*[a-z]+)(?=.*[0-9]+).{8,}$')
+	mo = pwChecker.search(pw)
+	if mo == None:
 		continue
 	else:
 		break
