@@ -28,8 +28,14 @@ def displayContent():
 	return localWordList
 
 def changeText(wordList):
-	for i in range(len(wordList)):
-		print(wordList[i])
+	#open and read from file
+    madLibs = open('madLibs.txt')
+	content = madLibs.read()
+
+	#use regex to search and replace content
+
+	#save to new text file
+    
 
 
 changeText(displayContent())
