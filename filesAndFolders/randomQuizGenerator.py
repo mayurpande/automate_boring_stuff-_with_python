@@ -15,14 +15,12 @@ capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix',
    'Augusta', 'Maryland': 'Annapolis', 'Massachusetts': 'Boston', 'Michigan':
    'Lansing', 'Minnesota': 'Saint Paul', 'Mississippi': 'Jackson', 'Missouri':
    'Jefferson City', 'Montana': 'Helena', 'Nebraska': 'Lincoln', 'Nevada':
-   'Carson City', 'New Hampshire': 'Concord', 'New Jersey': 'Trenton', 'New
-   Mexico': 'Santa Fe', 'New York': 'Albany', 'North Carolina': 'Raleigh',
+   'Carson City', 'New Hampshire': 'Concord', 'New Jersey': 'Trenton', 'New Mexico': 'Santa Fe', 'New York': 'Albany', 'North Carolina': 'Raleigh',
    'North Dakota': 'Bismarck', 'Ohio': 'Columbus', 'Oklahoma': 'Oklahoma City',
    'Oregon': 'Salem', 'Pennsylvania': 'Harrisburg', 'Rhode Island': 'Providence',
    'South Carolina': 'Columbia', 'South Dakota': 'Pierre', 'Tennessee':
    'Nashville', 'Texas': 'Austin', 'Utah': 'Salt Lake City', 'Vermont':
-   'Montpelier', 'Virginia': 'Richmond', 'Washington': 'Olympia', 'West
-   Virginia': 'Charleston', 'Wisconsin': 'Madison', 'Wyoming': 'Cheyenne'}
+   'Montpelier', 'Virginia': 'Richmond', 'Washington': 'Olympia', 'West Virginia': 'Charleston', 'Wisconsin': 'Madison', 'Wyoming': 'Cheyenne'}
 
 #Generate 35 quiz files.
 for quizNum in range(35):
@@ -32,11 +30,11 @@ for quizNum in range(35):
 
 	# Write out the header for the quiz
 	quizFile.write('Name:\n\nDate:\n\nPeriod:\n\n')
-	quizFile.write((' ' * 20 + 'State Capitals Quiz (Form  %s)' % (quizNum + 1))
+	quizFile.write((' ' * 20) + 'State Capitals Quiz (Form  %s)' % (quizNum + 1))
 	quizFile.write('\n\n')
 
 	# Shuffle the order of the states
-	states = list(capital.keys())
+	states = list(capitals.keys())
 	random.shuffle(states)
 
 	# Loop through all 50 states, making a question for each
