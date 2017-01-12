@@ -4,13 +4,33 @@
 # users add their own text anywhere the word 
 # ADJECTIVE, NOUN, ADVERB, or VERB appears in the text file.
 
+def openReadFile():
+	madLibs = open('/home/mayur/environements/automate_boring_stuff_with_python/filesAndFolders/madLibs.txt','w')
 
-madLibs = open('/home/mayur/environements/automate_boring_stuff_with_python/filesAndFolders/madLibs.txt','w')
+	madLibs.write('The ADJECTIVE panda walked to the NOUN and then VERB. A nearby NOUN was unaffected by these events.')
 
-madLibs.write('The ADJECTIVE panda walked to the NOUN and then VERB. A nearby NOUN was unaffected by these events.')
+	madLibs.close()
+	madLibs = open('madLibs.txt')
+	content = madLibs.read()
+	madLibs.close()
+	print(content)
 
-madLibs.close()
-madLibs = open('madLibs.txt')
-content = madLibs.read()
-madLibs.close()
-print(content)
+def displayContent():
+	print('Enter an adjective:\n')
+	adjective = input()
+	print('Enter a noun:\n')
+	noun = input()
+	print('Enter a verb\n')
+	verb = input()
+	print('Enter a noun:\n')
+	noun2 = input()
+	localWordList = [adjective, noun, verb, noun2]
+	return localWordList
+
+def changeText(wordList):
+	for i in range(len(wordList)):
+		print(wordList[i])
+
+
+changeText(displayContent())
+	
